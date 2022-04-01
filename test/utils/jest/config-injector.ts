@@ -1,5 +1,6 @@
 import config from 'config';
 
+config.auth = config.auth || {};
 config.auth.jwtSecret = 'some-fake-key';
 
 process.env.TEST_MODE = 'test';
