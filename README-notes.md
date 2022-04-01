@@ -42,6 +42,7 @@ was used for production sooner or later it would be changed to a post to allow m
 2. I could have allowed for all fields to be filtered and sortable, but I believe the ones i implemented were the most important ones.
 3. The integration/acceptance tests were a bit lacking and there were a lot more combinations of parameters that i could have done, they were 
 also done under the assumption that the database would be populated with the dump.sql.
+4. Related with the maximum number of expenses to return this could be configurable and ajusted based on the application needs, the users needs, if this API were to be used by clients, and try to reach a number that wouldn't stress the API or DB and would still minimize the number of requests needed to get the information. 
 
 Future improvements
 1. Improve error handling - currently exceptions and stack traces are being sent to the client, including database stack trades, which should not happen.
@@ -55,6 +56,7 @@ permissions to access the other user expenses.
 4. Logging/error reporting - another thing that I would like to improve is the logging I believe is very useful to have logging for each request knowing when it started and finished
 and also how much time it took. Another thing I find important is to have the errors be reported to tools like Sentry, this way we can get alerts and it's easier to identify problems. Sentry also 
 provides a service to give metrics about requests which I believe are also very important.
+5. Database indexes - based on the filters that the endpoint will allow the expenses table should have it's indexes reviewed.
 
 
 
